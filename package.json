@@ -1,0 +1,26 @@
+{
+  "name": "cypress_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xziwkii/cypress_tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/xziwkii/cypress_tests/issues"
+  },
+  "homepage": "https://github.com/xziwkii/cypress_tests#readme",
+  "devDependencies": {
+    "cypress": "^16.2.0"
+  }
+}
