@@ -25,7 +25,7 @@ module.exports = defineConfig({
     defaultCommandTimeout: 8000,
     video: false,
     screenshotOnRunFailure: true,
-    specPattern: ["cypress/e2e/garage/**/*.cy.js", "cypress/setup/**/*.cy.js"],
+    specPattern: ["cypress/e2e/garage/**/*.cy.js", "cypress/e2e/api/**/*.cy.js", "cypress/setup/**/*.cy.js"],
     setupNodeEvents(on) {
       on("task", { getCreds: () => ({ basicAuth, user }) });
     },

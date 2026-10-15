@@ -49,3 +49,29 @@ Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
 
   return originalFn(element, text, options);
 });
+// GET /api/cars: list of cars of the logged-in user
+Cypress.Commands.add("getCars", () => {
+  return getCreds().then(({ basicAuth }) => {
+    return cy.request({ url: "/api/cars", auth: basicAuth });
+  });
+});
+
+// POST /api/expenses: creates an expense for the given car and returns the response
+Cypress.Commands.add("createExpense", (carId, expense) => {
+  return getCreds().then(({ basicAuth }) => {
+    return cy.request({
+      method: "POST",
+      url: "/api/expenses",
+      auth: basicAuth,
+      failOnStatusCode: false,
+      body: {
+        carId,
+        reportedAt: expense.reportedAt,
+        mileage: expense.mileage,
+        liters: expense.liters,
+        totalCost: expense.totalCost,
+        forceMileage: false,
+      },
+    });
+  });
+});

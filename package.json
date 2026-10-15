@@ -166,7 +166,8 @@
     "open:qauto": "cypress open --config-file cypress.qauto.config.js",
     "open:qauto2": "cypress open --config-file cypress.qauto2.config.js",
     "register:qauto": "cypress run --config-file cypress.qauto.config.js --spec cypress/setup/register-user.cy.js",
-    "register:qauto2": "cypress run --config-file cypress.qauto2.config.js --spec cypress/setup/register-user.cy.js"
+    "register:qauto2": "cypress run --config-file cypress.qauto2.config.js --spec cypress/setup/register-user.cy.js",
+    "test:api": "cypress run --config-file cypress.qauto.config.js --spec cypress/e2e/api/**/*.cy.js"
   },
   "repository": {
     "type": "git",

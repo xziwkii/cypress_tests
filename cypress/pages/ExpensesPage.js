@@ -4,6 +4,12 @@ class ExpensesPage {
     return this;
   }
 
+  selectCar(name) {
+    cy.get("#carSelectDropdown").click();
+    cy.contains(".dropdown-menu .dropdown-item", name).then(($item) => { if ($item.hasClass("disabled")) { cy.get("#carSelectDropdown").click(); } else { cy.wrap($item).click(); } });
+    return this;
+  }
+
   addExpense({ car, mileage, liters, totalCost }) {
     cy.contains("button", /add (an )?expense/i).click();
     cy.get(".modal-content").should("be.visible");
