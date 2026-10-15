@@ -151,3 +151,6 @@ vite.config.ts.timestamp-*
 cypress/reports/
 mochawesome-report/
 cypress/screenshots/
+
+cypress/screenshots/
+cypress/reports/

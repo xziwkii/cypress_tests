@@ -156,7 +156,7 @@
     "yauzl": "^3.4.0"
   },
   "devDependencies": {
-    "cypress": "^16.2.0",
+    "cypress": "^14.5.4",
     "mochawesome": "^8.1.1"
   },
   "scripts": {
@@ -167,7 +167,8 @@
     "open:qauto2": "cypress open --config-file cypress.qauto2.config.js",
     "register:qauto": "cypress run --config-file cypress.qauto.config.js --spec cypress/setup/register-user.cy.js",
     "register:qauto2": "cypress run --config-file cypress.qauto2.config.js --spec cypress/setup/register-user.cy.js",
-    "test:api": "cypress run --config-file cypress.qauto.config.js --spec cypress/e2e/api/**/*.cy.js"
+    "test:api": "cypress run --config-file cypress.qauto.config.js --spec cypress/e2e/api/**/*.cy.js",
+    "test:firefox": "cypress run --browser firefox --spec cypress/e2e/header-footer.cy.js"
   },
   "repository": {
     "type": "git",
